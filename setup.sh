@@ -5,7 +5,7 @@ set -ex
 
 # Create partitions
 sgdisk \
-  -n 1::+128m \
+  -n 1::+128m --typecode 1:ef00 \
   -n 2 \
   /dev/sda
 mkfs.ext4 /dev/sda2
